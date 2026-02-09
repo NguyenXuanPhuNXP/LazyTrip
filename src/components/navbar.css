@@ -2,11 +2,12 @@ nav{
     background-color: #fff;
     overflow: hidden;
     position: fixed;
-    top: 50px;
+    top: 55px;
     left: 0;
     height: 100%;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    z-index: 1000;
 }
 
 
@@ -50,7 +51,7 @@ nav.nav-closed {
 
 .toggle-button{
     position: fixed;
-    top: 50px;
+    top: 55px;
     background-color: white;
     color: black;
     border: none;
@@ -58,6 +59,7 @@ nav.nav-closed {
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     border-radius: 30%;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .toggle-button.open {
