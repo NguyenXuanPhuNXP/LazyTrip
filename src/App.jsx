@@ -4,6 +4,8 @@ import Header from './components/header.jsx'
 import Navbar from './components/navbar.jsx'
 import ToggleButton from './components/ToggleButton.jsx'
 import Footer from './components/footer.jsx'
+import NofiticationBox from './components/nofiticationBox.jsx'
+import Map from './components/map.jsx'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,10 +17,10 @@ function App() {
         isOpen={isOpen}
         toggle={() => setIsOpen(!isOpen)}
       />
-      <div className="content">
-        <h2>Welcome to Lazy Trip</h2>
-        <p>Your ultimate travel companion.</p>
-      </div>
+
+      <Map />
+      
+      <NofiticationBox />
       <Footer />
     </>
   )
