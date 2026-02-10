@@ -1,0 +1,11 @@
+.location-box {
+    position: fixed;
+    top: 60px;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 100;
+    width: calc(100vw - 200px);
+}
