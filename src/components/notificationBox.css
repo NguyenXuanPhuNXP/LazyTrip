@@ -1,0 +1,39 @@
+.notification_box {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    width: 250px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: 1000;
+    max-height: 80vh;
+  
+    overflow-y: auto;   
+    overflow-x: hidden;
+    /* display: none; */
+}
+
+
+.segment_box {
+  background: #f9f9f9;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+}
+
+.risk.cao {
+  color: red;
+  font-weight: bold;
+}
+
+.risk.trung bình {
+  color: orange;
+  font-weight: bold;
+}
+
+.risk.thấp {
+  color: green;
+  font-weight: bold;
+}

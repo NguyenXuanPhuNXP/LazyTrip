@@ -4,11 +4,44 @@ import Header from './components/header.jsx'
 import Navbar from './components/navbar.jsx'
 import ToggleButton from './components/ToggleButton.jsx'
 import Footer from './components/footer.jsx'
-import NofiticationBox from './components/nofiticationBox.jsx'
+import NotificationBox from './components/notificationBox.jsx'
 import Map from './components/map.jsx'
+import LocationBox from './components/location_box.jsx'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const [location, setLocation] = useState('');
+
+  const DEMO_Data = {
+  totalDistance: "25 km",
+  totalTime: "50 phút",
+  segments: [
+    {
+      from: "Hà Nội",
+      to: "Hà Đông",
+      distance: "8 km",
+      time: "15 phút",
+      weather: {
+        temperature: 30,
+        condition: "Mưa nhẹ"
+      },
+      floodRisk: "Trung bình"
+    },
+    {
+      from: "Hà Đông",
+      to: "Thanh Xuân",
+      distance: "10 km",
+      time: "20 phút",
+      weather: {
+        temperature: 29,
+        condition: "Mưa"
+      },
+      floodRisk: "Cao"
+    }
+  ]
+}
+
+
   return (
     <>
       <Header />
@@ -18,9 +51,11 @@ function App() {
         toggle={() => setIsOpen(!isOpen)}
       />
 
+      <LocationBox location={location} setLocation={setLocation} />
+
       <Map />
       
-      <NofiticationBox />
+      <NotificationBox tripData={DEMO_Data} />
       <Footer />
     </>
   )
