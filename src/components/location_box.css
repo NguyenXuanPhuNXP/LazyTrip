@@ -1,9 +1,7 @@
 .location-box {
     position: absolute;
     top: 20px;
-    /* Đưa điểm bắt đầu của hộp ra giữa 50% chiều ngang */
     left: 50%;
-    /* Dịch ngược lại một nửa chiều rộng của chính nó để căn giữa hoàn hảo */
     transform: translateX(-50%);
     width: 350px;
     background-color: white;
@@ -16,8 +14,26 @@
     gap: 10px;
 }
 
+.location-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.start-icon, .point-icon {
+    font-size: 18px;
+    min-width: 25px;
+}
+
+.location-empty {
+    color: #999;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+}
+
 @media (max-width: 400px) {
     .location-box {
-        width: 90%; /* Tự động co lại khi màn hình quá nhỏ */
+        width: 90%;
     }
 }

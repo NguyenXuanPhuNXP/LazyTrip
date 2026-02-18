@@ -12,6 +12,7 @@ import Map from './components/map.jsx'
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [location, setLocation] = useState('');
+  const [waypoints, setWaypoints] = useState([]);
 
   const DEMO_Data = {
   totalDistance: "25 km",
@@ -52,9 +53,9 @@ function App() {
         toggle={() => setIsOpen(!isOpen)}
       />
 
-      <LocationBox location={location} setLocation={setLocation} />
+      <LocationBox waypoints={waypoints} />
 
-      <MapComponent />
+      <MapComponent waypoints={waypoints} setWaypoints={setWaypoints} />
       
       <NotificationBox tripData={DEMO_Data} />
       <Footer />
