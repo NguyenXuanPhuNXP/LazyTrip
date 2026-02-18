@@ -5,8 +5,9 @@ import Navbar from './components/navbar.jsx'
 import ToggleButton from './components/ToggleButton.jsx'
 import Footer from './components/footer.jsx'
 import NotificationBox from './components/notificationBox.jsx'
-import Map from './components/map.jsx'
+import MapComponent from './components/mapomponent';
 import LocationBox from './components/location_box.jsx'
+import Map from './components/map.jsx'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +54,7 @@ function App() {
 
       <LocationBox location={location} setLocation={setLocation} />
 
-      <Map />
+      <MapComponent />
       
       <NotificationBox tripData={DEMO_Data} />
       <Footer />
