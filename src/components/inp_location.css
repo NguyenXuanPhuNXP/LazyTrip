@@ -1,9 +1,25 @@
-.inp_location{
-    width: calc(100% - 80px);
+.inp_location {
     box-sizing: border-box;
-    padding: 10px;
-    margin: 10px 0;
+    /* Giảm padding xuống một chút để tiết kiệm diện tích khi zoom */
+    padding: 8px 12px; 
+    margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    /* Sử dụng đơn vị rem giúp font chữ ổn định hơn khi zoom */
+    font-size: 1rem; 
+    background-color: white;
+    
+    /* KHẮC PHỤC CHÍNH: Giới hạn chiều rộng tối đa */
+    width: 100%;
+    max-width: 300px; 
+}
+/* Khi màn hình nhỏ hoặc khi zoom to (làm giảm chiều rộng hiển thị) */
+@media (max-width: 768px) {
+    .inp_location {
+        font-size: 14px;
+        padding: 6px;
+    }
+    .location-box {
+        max-width: 320px;
+    }
 }

@@ -4,7 +4,7 @@
     right: 0;
     width: 250px;
     padding: 15px;
-    background-color: #fff;
+    background-color: #736f6f;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     z-index: 1000;
@@ -17,7 +17,7 @@
 
 
 .segment_box {
-  background: #f9f9f9;
+  background:#736f6f;
   padding: 12px;
   margin-top: 12px;
   border-radius: 8px;
