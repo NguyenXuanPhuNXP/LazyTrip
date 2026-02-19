@@ -11,7 +11,6 @@ import Map from './components/map.jsx'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-  const [location, setLocation] = useState('');
   const [waypoints, setWaypoints] = useState([]);
 
   const DEMO_Data = {
