@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import InpLocation from "./inp_location.jsx";
 import "./location_box.css";
-import { getAddressFromCoords, getCoordsFromAddress } from "../services/routeService";
+import { getAddressFromCoords, getCoordsFromAddress } from "./services/routeService";
 
 function LocationBox({ waypoints = [], setWaypoints }) {
   const [locations, setLocations] = useState([]);

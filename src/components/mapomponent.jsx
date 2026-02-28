@@ -2,7 +2,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMapEvents, Polyline } from '
 import 'leaflet/dist/leaflet.css'; // Quan trọng: Để hiện thị các mảnh bản đồ
 import { useState, useEffect } from 'react';
 import './mapomponent.css';
-import { calculateRoute } from '../services/routeService';
+import { calculateRoute } from './services/routeService';
 
 // Thành phần xử lý tương tác click
 function LocationMarker({ waypoints, onSelectMarker }) {
