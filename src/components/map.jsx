@@ -14,3 +14,5 @@ function Map() {
 }
 
 export default Map;
+
+// Note: The iframe source URL is set to display a map of Hanoi, Vietnam.
