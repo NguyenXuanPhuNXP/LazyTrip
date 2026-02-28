@@ -52,7 +52,7 @@ function App() {
         toggle={() => setIsOpen(!isOpen)}
       />
 
-      <LocationBox waypoints={waypoints} />
+      <LocationBox waypoints={waypoints} setWaypoints={setWaypoints} />
 
       <MapComponent waypoints={waypoints} setWaypoints={setWaypoints} />
       

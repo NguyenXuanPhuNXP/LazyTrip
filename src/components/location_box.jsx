@@ -30,12 +30,14 @@ function LocationBox({ waypoints = [], setWaypoints }) {
 
   // Xóa một địa điểm
   const handleDeleteLocation = (index) => {
+    console.log("Delete location at index:", index);
     const newWaypoints = waypoints.filter((_, i) => i !== index);
     setWaypoints(newWaypoints);
   };
 
   // Xóa tất cả địa điểm
   const handleClearAll = () => {
+    console.log("Clear all locations");
     setWaypoints([]);
     setInputValue("");
   };

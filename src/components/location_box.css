@@ -105,12 +105,18 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: bold;
     transition: background-color 0.3s;
     min-width: 32px;
+    flex-shrink: 0;
 }
 
 .btn-delete:hover {
     background-color: #cc0000;
+}
+
+.btn-delete:active {
+    background-color: #990000;
 }
 
 .btn-clear-all {
@@ -121,6 +127,7 @@
     border-radius: 6px;
     cursor: pointer;
     font-size: 14px;
+    font-weight: bold;
     transition: background-color 0.3s;
     width: 100%;
     margin-top: 8px;
@@ -128,6 +135,10 @@
 
 .btn-clear-all:hover {
     background-color: #5a6268;
+}
+
+.btn-clear-all:active {
+    background-color: #495057;
 }
 
 .location-empty {
