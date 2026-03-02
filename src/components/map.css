@@ -1,0 +1,9 @@
+
+.map{
+    position: fixed;
+    top: 48px;
+    left: 0;
+    width: calc(100vw);
+    height: calc(100vh - 100px);
+    z-index: 1;
+}
