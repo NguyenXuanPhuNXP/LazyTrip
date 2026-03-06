@@ -1,14 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\LazyTrip\\src",
-    "\\python_backend\\models",
-    "\\python_backend\\routers",
-    "\\python_backend\\services",
-    "\\src",
-    "\\src\\components",
-    "\\src\\services"
+    "\\LazyTrip2",
+    "\\LazyTrip2\\LazyTrip"
   ],
-  "SelectedNode": "\\src\\App.jsx",
+  "SelectedNode": "\\LazyTrip2",
   "PreviewInSolutionExplorer": false
 }
