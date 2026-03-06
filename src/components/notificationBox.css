@@ -2,19 +2,40 @@
     position: fixed;
     top: 50px;
     right: 0;
-    width: 250px;
     padding: 15px;
-    background-color: #736f6f;
+    background-color: #ffffff;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     z-index: 1000;
     max-height: 80vh;
-  
     overflow-y: auto;   
-    overflow-x: hidden;
-    /* display: none; */
+    overflow-x: hidden;}
+
+.box-close {
+    width: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
 }
 
+.box-open {
+    width: 250px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.btn-closeopen-box {
+    position: fixed;
+    top: 60px;
+    right: 15px;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 2000;
+}
 
 .segment_box {
   background:#736f6f;

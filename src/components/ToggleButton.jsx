@@ -1,4 +1,4 @@
-import "./navbar.css";
+import "./location_box.css";
 
 function ToggleButton({ isOpen, toggle }) {
   return (

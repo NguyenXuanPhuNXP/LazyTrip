@@ -76,3 +76,23 @@ export async function calculateRoute(waypoints) {
     return null;
   }
 }
+
+/**
+ * Get trip schedule from Python Backend API
+ */
+export async function getTripSchedule(startLat, startLng, endLat, endLng) {
+  try {
+    const response = await fetch(
+      `http://localhost:8000/api/navigate?start_lat=${startLat}&start_lon=${startLng}&end_lat=${endLat}&end_lon=${endLng}`
+    );
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch schedule from backend');
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error getting trip schedule from backend:", error);
+    return null;
+  }
+}

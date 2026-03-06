@@ -3,7 +3,7 @@ import InpLocation from "./inp_location.jsx";
 import "./location_box.css";
 import { getAddressFromCoords, getCoordsFromAddress } from "../services/routeService";
 
-function LocationBox({ waypoints = [], setWaypoints }) {
+function LocationBox({ waypoints = [], setWaypoints, isOpen}) {
   const [locations, setLocations] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [loading, setLoading] = useState(false);
@@ -74,7 +74,7 @@ function LocationBox({ waypoints = [], setWaypoints }) {
   };
 
   return (
-    <div className="location-box">
+      <div className={`location-box ${isOpen ? "box-open" : "box-close"}`}>
       {/* Input nhập địa điểm */}
       <div className="input-section">
         <input
