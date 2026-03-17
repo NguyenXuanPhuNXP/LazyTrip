@@ -2,12 +2,41 @@ nav{
     background-color: #fff;
     overflow: hidden;
     position: fixed;
-    top: 55px;
+    top: 48px;
     left: 0;
     height: 100%;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     z-index: 1000;
+}
+
+.nav-head {
+    display: flex;
+    justify-content: flex-end;
+    padding: 6px 8px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.nav-close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #64748b;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    transition: background 0.15s, color 0.15s;
+}
+
+.nav-close-btn:hover {
+    background: #fee2e2;
+    color: #ef4444;
 }
 
 
@@ -59,7 +88,7 @@ nav.nav-closed {
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     border-radius: 30%;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 1100;
 }
 
 .toggle-button.open {

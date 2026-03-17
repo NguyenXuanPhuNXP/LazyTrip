@@ -1,39 +1,306 @@
-.notification_box {
+/* Wrapper trượt từ phải */
+.noti-wrapper {
     position: fixed;
-    top: 50px;
+    top: 60px;
     right: 0;
-    width: 250px;
-    padding: 15px;
-    background-color: #736f6f;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    z-index: 1000;
-    max-height: 80vh;
-  
-    overflow-y: auto;   
+    width: 290px;
+    z-index: 900;
+    transition: transform 0.3s ease-in-out;
+}
+
+.noti-wrapper.noti-open {
+    transform: translateX(0);
+}
+
+.noti-wrapper.noti-closed {
+    transform: translateX(290px);
+}
+
+/* Tab toggle luôn hiển thị ở cạnh trái của wrapper */
+.noti-tab-btn {
+    position: absolute;
+    left: -36px;
+    top: 20px;
+    width: 36px;
+    height: 48px;
+    background: #fff;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    box-shadow: -3px 2px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    font-size: 16px;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+}
+
+.noti-tab-btn:hover {
+    background: #f0f9ff;
+    color: #0ea5e9;
+}
+
+/* Panel cuộn */
+.noti-panel {
+    width: 290px;
+    max-height: calc(100vh - 250px);
+    background: #f8fafc;
+    box-shadow: -3px 2px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 8px 0 0 8px;
+    overflow-y: auto;
     overflow-x: hidden;
-    /* display: none; */
+    padding-bottom: 16px;
 }
 
+.noti-panel::-webkit-scrollbar { width: 4px; }
+.noti-panel::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 2px; }
 
-.segment_box {
-  background:#736f6f;
-  padding: 12px;
-  margin-top: 12px;
-  border-radius: 8px;
+/* Header panel */
+.noti-header {
+    background: #0ea5e9;
+    padding: 14px 16px;
+    border-radius: 8px 0 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
-.risk.cao {
-  color: red;
-  font-weight: bold;
+.noti-header h2 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
 }
 
-.risk.trung bình {
-  color: orange;
-  font-weight: bold;
+/* Tổng quan */
+.trip-summary-card {
+    background: #fff;
+    margin: 0 12px 8px;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.risk.thấp {
-  color: green;
-  font-weight: bold;
+.summary-divider {
+    border: none;
+    border-top: 1px solid #f1f5f9;
+    margin: 2px 0;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.summary-item--top {
+    align-items: flex-start;
+}
+
+.summary-grow {
+    flex: 1;
+    min-width: 0;
+}
+
+.summary-icon { font-size: 20px; flex-shrink: 0; }
+
+.summary-label {
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.summary-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-top: 1px;
+}
+
+/* Danh sách chặng */
+.section-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 14px 12px 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.waypoint-count-badge {
+    background: #e0f2fe;
+    color: #0369a1;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 7px;
+    border-radius: 10px;
+    letter-spacing: 0;
+}
+
+/* Waypoints inline trong summary card */
+.waypoints-inline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 4px;
+}
+
+.waypoint-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.waypoint-row:last-child {
+    border-bottom: none;
+}
+
+.waypoint-dot {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.waypoint-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.waypoint-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.waypoint-address {
+    font-size: 12px;
+    color: #94a3b8;
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.waypoint-coords {
+    font-size: 11px;
+    color: #cbd5e1;
+    font-family: monospace;
+}
+
+.segment-card {
+    background: #fff;
+    margin: 0 12px 8px;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.segment-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0ea5e9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.segment-route {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    flex-wrap: wrap;
+}
+
+.segment-dot {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 10px !important;
+    flex-shrink: 0;
+}
+
+.segment-route .arrow { color: #94a3b8; }
+
+.segment-detail,
+.segment-weather {
+    display: flex;
+    gap: 12px;
+    font-size: 12px;
+    color: #475569;
+}
+
+.segment-flood {
+    font-size: 12px;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+/* Badge nguy cơ ngập */
+.risk-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.risk-cao { background: #fee2e2; color: #dc2626; }
+.risk-trung-binh { background: #fef3c7; color: #d97706; }
+.risk-thap { background: #dcfce7; color: #16a34a; }
+
+/* Không có dữ liệu */
+.no-data {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+    padding: 20px 0;
+}
+
+/* Loading Spinner Text */
+.noti-spinner {
+    color: #0ea5e9;
+    font-style: italic;
+    animation: pulse 1.5s infinite;
+}
+
+.noti-loading-chặng {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 13px;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
 }

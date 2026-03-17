@@ -1,17 +1,17 @@
 .inp_location {
-    box-sizing: border-box;
+    background-color: #f0f8ff; /* Thay đổi màu nền (VD: xanh nhạt) */
+    color: #333; /* Thay đổi màu chữ (VD: xám đậm) */
+
     /* Giảm padding xuống một chút để tiết kiệm diện tích khi zoom */
-    padding: 8px 12px; 
+    padding: 8px 12px;
     margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     /* Sử dụng đơn vị rem giúp font chữ ổn định hơn khi zoom */
-    font-size: 1rem; 
-    background-color: white;
-    
+    font-size: 1rem;
     /* KHẮC PHỤC CHÍNH: Giới hạn chiều rộng tối đa */
     width: 100%;
-    max-width: 300px; 
+    max-width: 300px;
 }
 /* Khi màn hình nhỏ hoặc khi zoom to (làm giảm chiều rộng hiển thị) */
 @media (max-width: 768px) {

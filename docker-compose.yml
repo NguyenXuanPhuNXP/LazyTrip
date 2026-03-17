@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lazytrip_frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./python_backend
+      dockerfile: Dockerfile
+    container_name: lazytrip_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./python_backend:/app
+    environment:
+      - OPEN_WEATHER_KEY=45ddcb8242af2acaccb7ec25ba1e428c

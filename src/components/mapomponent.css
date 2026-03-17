@@ -9,13 +9,20 @@
 }
 
 .loading {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    position: fixed;
+    top: 10px;
+    right: 20px;
     background: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 12px 20px;
     border-radius: 8px;
-    z-index: 1000;
+    z-index: 9999;
     font-size: 14px;
+}
+
+.leaflet-top.leaflet-left {
+    top: unset !important;
+    left: unset !important;
+    bottom: 30px;
+    right: 10px;
 }
